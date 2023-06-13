@@ -91,7 +91,7 @@ for i in range(20):
         player_1.forward(20 * turn_1)
 
         turn_2 = input("Press the enter key to advance player 2")
-        turn_2 = random.choice()
+        turn_2 = random.choice(dice)
         print("Your number is: ", turn_2, "\nYou advance: ", turn_2 * 20)
         player_2.pendown()
         player_2.forward(20 * turn_2)
