@@ -83,6 +83,18 @@ for i in range(20):
     elif player_2.pos() >= (200, -200):
         print("Player 2 Won 🥳")
         break
+    else:
+        turn_1 = input("Press the enter key to advance player 1")
+        turn_1 = random.choice(dice)
+        print("Your number is: ", turn_1, "\nYou advance: ", turn_1 * 20)
+        player_1.pendown()
+        player_1.forward(20 * turn_1)
+
+        turn_2 = input("Press the enter key to advance player 2")
+        turn_2 = random.choice()
+        print("Your number is: ", turn_2, "\nYou advance: ", turn_2 * 20)
+        player_2.pendown()
+        player_2.forward(20 * turn_2)
 
 ##### End pos method #####
 
