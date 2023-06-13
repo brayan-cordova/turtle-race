@@ -5,32 +5,26 @@
 
 ################################################################################
 
+
 # library import.
 import turtle
 import random
 
-################################################################################
-################################################################################
-
-# Start Customizing the game
+###### Start Customizing the game #####
 
 s = turtle.Screen()  # show screen.
 s.title("Turtle Game by Brayan Cordova - #BLC")  # title of window.
 s.bgcolor("light gray")  # background color.
 
-# End Customizing the game
-################################################################################
-################################################################################
+##### End Customizing the game #####
 
 
-# definition of the number of players.
+###### definition of the number of players #####
 player_1 = turtle.Turtle()  # player 1.
 player_2 = turtle.Turtle()  # player 2.
 
-################################################################################
-################################################################################
 
-# # Start Creating Players
+##### Start Creating Players #####
 
 # attributes for player 1.
 player_1.hideturtle()  # hide the turtle.
@@ -46,11 +40,10 @@ player_2.color("green", "green")
 player_2.shapesize(2, 2, 2)  # size of turtle.
 player_2.pensize(3)  # pen size.
 
-# End Creating Players
-################################################################################
-################################################################################
+##### End Creating Players #####
 
-# Start Drawing the Goals
+
+##### Start Drawing the Goals #####
 
 # drawing the goal for player 1.
 player_1.penup()  # i give him the instruction not to draw.
@@ -74,15 +67,23 @@ player_2.penup()
 player_2.goto(-250, -170)
 player_2.showturtle()  # show the turtle.
 
-# End Drawing the Goals
-################################################################################
-################################################################################
-
-# Start
+##### End Drawing the Goals #####
 
 
-# End
-################################################################################
-################################################################################
+###### Start pos method #####
+
+# dice to play.
+dice = [1, 2, 3, 4, 5, 6]
+
+
+for i in range(20):
+    if player_1.pos() >= (200, 200):
+        print("Player 1 Won 🥳")
+        break
+    elif player_2.pos() >= (200, -200):
+        print("Player 2 Won 🥳")
+        break
+
+##### End pos method #####
 
 turtle.done()  # keep the windows open.
